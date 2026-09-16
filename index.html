@@ -1,0 +1,2472 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Service Center | Auto Repair & Maintenance in Karachi</title>
+    <meta name="description" content="Car Service Center in Karachi provides vehicle servicing, maintenance, diagnostics and automotive repair-related support for car owners.">
+    <meta name="keywords" content="Car Service Center Karachi, Car Repair Karachi, Auto Maintenance Karachi, Vehicle Diagnostics Karachi, Brake Service, Oil Change Karachi">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Car Service Center | Auto Repair & Maintenance in Karachi">
+    <meta property="og:description" content="Professional vehicle servicing, maintenance and diagnostic support for car owners in Karachi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://carservicecenter.pk">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e53e3e'><path d='M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.76l.12.34V17z'/><circle cx='7.5' cy='14.5' r='1.5'/><circle cx='16.5' cy='14.5' r='1.5'/></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        :root {
+            --bg-primary: #0a0c10;
+            --bg-secondary: #131720;
+            --bg-card: #1a202c;
+            --bg-glass: rgba(26, 32, 44, 0.75);
+            --accent: #ef4444;
+            --accent-hover: #dc2626;
+            --accent-glow: rgba(239, 68, 68, 0.25);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border-color: #2d3748;
+            --border-glow: rgba(239, 68, 68, 0.4);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6, .brand-font {
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #ffffff;
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--accent-glow);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #22bf5b;
+            transform: translateY(-2px);
+        }
+
+        /* SECTION HEADERS */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-header span {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .section-header h2 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        /* NAVBAR */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+            background: rgba(10, 12, 16, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        header.scrolled {
+            background: rgba(10, 12, 16, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            height: 68px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .logo svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            margin: 0 auto;
+        }
+
+        .nav-links a {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .nav-actions .btn {
+            padding: 9px 18px;
+            font-size: 0.8rem;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            overflow: hidden;
+            background: radial-gradient(circle at 70% 30%, rgba(239, 68, 68, 0.08) 0%, transparent 60%),
+                        linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 36px;
+            max-width: 540px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transform: scale(1.02);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image-wrapper:hover img {
+            transform: scale(1.06);
+        }
+
+        .hud-card {
+            position: absolute;
+            background: var(--bg-glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            padding: 16px 20px;
+            border-radius: 8px;
+            z-index: 3;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .hud-card-1 {
+            top: -20px;
+            left: -20px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .hud-card-2 {
+            bottom: -20px;
+            right: -20px;
+            animation: float 5s ease-in-out infinite 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .hud-title {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .hud-value {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        /* SERVICES SECTION */
+        .services {
+            padding: 100px 0;
+            background-color: var(--bg-secondary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        .service-img {
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .service-content h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .service-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: gap 0.3s ease;
+        }
+
+        .service-link:hover {
+            gap: 12px;
+        }
+
+        /* SERVICE FINDER SECTION */
+        .service-finder {
+            padding: 100px 0;
+            background-color: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .finder-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .finder-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+
+        .finder-pill {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .finder-pill:hover, .finder-pill.active {
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .finder-result {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            display: none;
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        .finder-result.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .finder-result h3 {
+            font-size: 1.75rem;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .finder-result p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        .next-step-box {
+            background: rgba(10, 12, 16, 0.6);
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .next-step-box span {
+            font-weight: 700;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .next-step-box p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* VEHICLE HEALTH CHECK & DIAGNOSTIC DASHBOARD */
+        .health-check {
+            padding: 100px 0;
+            background-color: var(--bg-secondary);
+        }
+
+        .health-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .health-category-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            transition: var(--transition);
+        }
+
+        .health-category-card:hover {
+            border-color: var(--border-glow);
+        }
+
+        .health-category-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .symptom-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .symptom-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .symptom-checkbox:hover {
+            color: var(--text-primary);
+        }
+
+        .symptom-checkbox input {
+            accent-color: var(--accent);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .health-summary {
+            background: var(--bg-card);
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+
+        .health-summary h3 {
+            font-size: 1.75rem;
+            margin-bottom: 12px;
+        }
+
+        .health-summary p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* DIAGNOSTIC DASHBOARD */
+        .diagnostic-dashboard {
+            padding: 100px 0;
+            background-color: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .dashboard-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dashboard-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .dashboard-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .dashboard-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .dashboard-panel {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--border-color);
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .dashboard-card.open .dashboard-panel {
+            display: block;
+        }
+
+        .dashboard-panel ul {
+            margin: 8px 0 12px 16px;
+            list-style: disc;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .dashboard-panel .next-step {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* MAINTENANCE GUIDE & KNOWLEDGE */
+        .maintenance-guide {
+            padding: 100px 0;
+            background-color: var(--bg-secondary);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        .guide-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            transition: var(--transition);
+        }
+
+        .guide-card:hover {
+            border-color: var(--border-glow);
+        }
+
+        .guide-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .guide-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* PRE-SERVICE CHECKLIST */
+        .checklist-section {
+            padding: 80px 0;
+            background-color: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .checklist-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .checklist-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            background: var(--bg-card);
+            border-radius: 50px;
+            height: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--accent);
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        .checklist-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .checklist-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 16px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .checklist-item:hover {
+            border-color: var(--accent);
+        }
+
+        .checklist-item input {
+            accent-color: var(--accent);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .checklist-item label {
+            cursor: pointer;
+            color: var(--text-primary);
+            font-size: 0.95igrem;
+            flex-grow: 1;
+        }
+
+        .checklist-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* SERVICE PROCESS */
+        .process {
+            padding: 100px 0;
+            background-color: var(--bg-secondary);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .process-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px 24px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .process-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .process-number {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+            opacity: 0.3;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .process-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .process-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* ABOUT & WHY CONTACT US */
+        .about-section {
+            padding: 100px 0;
+            background-color: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .about-content p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        .about-image {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 80px;
+        }
+
+        .why-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            transition: var(--transition);
+        }
+
+        .why-card:hover {
+            border-color: var(--accent);
+        }
+
+        .why-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .why-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* COMMON PROBLEMS & KNOWLEDGE */
+        .problems-section {
+            padding: 100px 0;
+            background-color: var(--bg-secondary);
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .problem-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .problem-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .problem-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .problem-details {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--border-color);
+            display: none;
+        }
+
+        .problem-card.active .problem-details {
+            display: block;
+        }
+
+        .problem-details p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .problem-details .next-step {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        /* FAQ SECTION */
+        .faq-section {
+            padding: 100px 0;
+            background-color: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item.active {
+            border-color: var(--accent);
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Barlow Condensed', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .faq-question svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--text-secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+            fill: var(--accent);
+        }
+
+        .faq-answer {
+            padding: 0 24px 20px 24px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* REQUEST / CONTACT SECTION (ZERO IMAGES) */
+        .contact-section {
+            padding: 100px 0;
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .contact-info {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .contact-info p {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .contact-detail-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: var(--text-primary);
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .contact-detail-item svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .contact-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .contact-form-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .contact-form-box h3 {
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 678px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            padding: 14px 16px;
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-confirmation {
+            display: none;
+            background: rgba(37, 211, 102, 0.1);
+            border: 1px solid #25d366;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .form-confirmation h4 {
+            color: #25d366;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .form-confirmation p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+            padding: 80px 0 30px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .footer-col p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* BACK TO TOP */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* RESPONSIVE DESIGN BREAKPOINTS */
+        @media (max-width: 1200px) {
+            .hero h1 { font-size: 3.5rem; }
+        }
+
+        @media (max-width: 992px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-content { max-width: 100%; margin: 0 auto; }
+            .hero p { margin: 0 auto 36px auto; }
+            .hero-btns { justify-content: center; }
+            .hero-visual { max-width: 600px; margin: 40px auto 0 auto; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 68px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 68px);
+                background: var(--bg-primary);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: left 0.3s ease;
+                border-top: 1px solid var(--border-color);
+            }
+            .nav-links.active {
+                left: 0;
+            }
+            .hamburger {
+                display: block;
+            }
+            .hero h1 { font-size: 2.75rem; }
+            .section-header h2 { font-size: 2.25rem; }
+            .nav-actions .btn-primary { display: none; }
+        }
+
+        @media (max-width: 576px) {
+            .container { padding: 0 16px; }
+            .hero h1 { font-size: 2.3rem; }
+            .finder-box, .checklist-box, .contact-info, .contact-form-box { padding: 24px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.76l.12.34V17z"/><circle cx='7.5' cy='14.5' r='1.5'/><circle cx='16.5' cy='14.5' r='1.5'/></svg>
+                CAR SERVICE CENTER
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#services">Services</a>
+                <a href="#diagnostics">Diagnostics</a>
+                <a href="#maintenance">Maintenance</a>
+                <a href="#process">Process</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary">Book Service Inquiry</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="location-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    Karachi, Pakistan
+                </div>
+                <h1>KEEP YOUR CAR READY FOR THE ROAD.</h1>
+                <p>Professional vehicle servicing, maintenance and diagnostic support for car owners in Karachi.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn btn-primary">Explore Services</a>
+                    <a href="https://wa.me/923082984718?text=Hello,%20I%20would%20like%20to%20inquire%20about%20car%20service%20for%20my%20vehicle." target="_blank" class="btn btn-whatsapp">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        WhatsApp Us
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <!-- High-quality car under service image -->
+                    <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=800&q=80" alt="Car under service in professional workshop">
+                </div>
+                <div class="hud-card hud-card-1">
+                    <div class="hud-title">Status</div>
+                    <div class="hud-value">Ready for Inspection</div>
+                </div>
+                <div class="hud-card hud-card-2">
+                    <div class="hud-title">Service Center</div>
+                    <div class="hud-value">Karachi Workshop</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span>Expert Care</span>
+                <h2>CAR SERVICE & MAINTENANCE</h2>
+                <p>Comprehensive inspection, repair and routine servicing options handled with professional technical care.</p>
+            </div>
+            <div class="services-grid">
+                <!-- 1 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=600&q=80" alt="General Car Service">
+                    </div>
+                    <div class="service-content">
+                        <h3>GENERAL CAR SERVICE</h3>
+                        <p>Routine vehicle servicing and maintenance support.</p>
+                        <a href="#contact" class="service-link" onclick="selectService('General Service')">Inquire Service <span>→</span></a>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=600&q=80" alt="Engine Diagnostics">
+                    </div>
+                    <div class="service-content">
+                        <h3>ENGINE DIAGNOSTICS</h3>
+                        <p>General engine-performance inspection and diagnostic support.</p>
+                        <a href="#contact" class="service-link" onclick="selectService('Engine')">Inquire Service <span>→</span></a>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1664298955509-88ea1e6f7bc4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fEJSQUtFJTIwU0VSVklDRXxlbnwwfHwwfHx8MA%3D%3D" alt="Brake Service">
+                    </div>
+                    <div class="service-content">
+                        <h3>BRAKE SERVICE</h3>
+                        <p>Brake-system inspection and maintenance.</p>
+                        <a href="#contact" class="service-link" onclick="selectService('Brakes')">Inquire Service <span>→</span></a>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1677009541467-5a717c4e9dca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8T0lMJTIwJTI2JTIwRklMVEVSJTIwU0VSVklDRXxlbnwwfHwwfHx8MA%3D%3D" alt="Oil & Filter Service">
+                    </div>
+                    <div class="service-content">
+                        <h3>OIL & FILTER SERVICE</h3>
+                        <p>Routine engine oil and filter maintenance.</p>
+                        <a href="#contact" class="service-link" onclick="selectService('General Service')">Inquire Service <span>→</span></a>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1661770030805-0abb8fd880f1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QkFUVEVSWSUyMFNFUlZJQ0V8ZW58MHx8MHx8fDA%3D" alt="Battery Service">
+                    </div>
+                    <div class="service-content">
+                        <h3>BATTERY SERVICE</h3>
+                        <p>Battery inspection and starting-system support.</p>
+                        <a href="#contact" class="service-link" onclick="selectService('Battery')">Inquire Service <span>→</span></a>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=600&q=80" alt="Tire & Wheel Service">
+                    </div>
+                    <div class="service-content">
+                        <h3>TIRE & WHEEL SERVICE</h3>
+                        <p>Tire condition, wheel and alignment-related service.</p>
+                        <a href="#contact" class="service-link" onclick="selectService('Tires')">Inquire Service <span>→</span></a>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://media.istockphoto.com/id/615793348/photo/car-air-conditioning.webp?a=1&b=1&s=612x612&w=0&k=20&c=04HBE6ZISfskaPloE5NZrZT7enDco3NyQt6tvVVCVwI=" alt="Car AC Service">
+                    </div>
+                    <div class="service-content">
+                        <h3>CAR AC SERVICE</h3>
+                        <p>Vehicle air-conditioning inspection and maintenance.</p>
+                        <a href="#contact" class="service-link" onclick="selectService('AC')">Inquire Service <span>→</span></a>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1623682783900-fea916dcba74?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RUxFQ1RSSUNBTCUyMERJQUdOT1NUSUNTfGVufDB8fDB8fHww" alt="Electrical Diagnostics">
+                    </div>
+                    <div class="service-content">
+                        <h3>ELECTRICAL DIAGNOSTICS</h3>
+                        <p>General automotive electrical-system troubleshooting.</p>
+                        <a href="#contact" class="service-link" onclick="selectService('Electrical')">Inquire Service <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE FINDER -->
+    <section class="service-finder">
+        <div class="container">
+            <div class="section-header">
+                <span>Interactive Guide</span>
+                <h2>WHAT DOES YOUR CAR NEED?</h2>
+                <p>Select a category below to explore general service information and next steps.</p>
+            </div>
+            <div class="finder-box">
+                <div class="finder-pills" id="finderPills">
+                    <div class="finder-pill active" data-target="routine">Routine Service</div>
+                    <div class="finder-pill" data-target="engine">Engine</div>
+                    <div class="finder-pill" data-target="brakes">Brakes</div>
+                    <div class="finder-pill" data-target="battery">Battery</div>
+                    <div class="finder-pill" data-target="tires">Tires</div>
+                    <div class="finder-pill" data-target="ac">AC</div>
+                    <div class="finder-pill" data-target="electrical">Electrical</div>
+                    <div class="finder-pill" data-target="inspection">General Inspection</div>
+                </div>
+
+                <!-- Results -->
+                <div id="finder-routine" class="finder-result active">
+                    <h3>Routine Service Selected</h3>
+                    <p>Regular vehicle servicing helps maintain optimal performance, fluid quality, and operational reliability for daily city and highway driving.</p>
+                    <div class="next-step-box">
+                        <span>Next Step</span>
+                        <p>Contact the service center to discuss the vehicle concern and arrange an appropriate inspection.</p>
+                    </div>
+                    <a href="https://wa.me/923082984718?text=Hello,%20I%20would%20like%20to%20inquire%20about%20Routine%20Service%20for%20my%20vehicle.%20Please%20share%20the%20details." target="_blank" class="btn btn-whatsapp">Inquire via WhatsApp</a>
+                </div>
+
+                <div id="finder-engine" class="finder-result">
+                    <h3>Engine Service Selected</h3>
+                    <p>Engine performance inspections cover general operation, fluid levels, belt conditions, and diagnostic scan evaluations.</p>
+                    <div class="next-step-box">
+                        <span>Next Step</span>
+                        <p>Contact the service center to discuss the vehicle concern and arrange an appropriate inspection.</p>
+                    </div>
+                    <a href="https://wa.me/923082984718?text=Hello,%20I%20would%20like%20to%20inquire%20about%20Engine%20Service%20for%20my%20vehicle.%20Please%20share%20the%20details." target="_blank" class="btn btn-whatsapp">Inquire via WhatsApp</a>
+                </div>
+
+                <div id="finder-brakes" class="finder-result">
+                    <h3>Brake Service Selected</h3>
+                    <p>Brake-system inspections check pads, rotors, fluid condition, and stopping response to ensure driving safety.</p>
+                    <div class="next-step-box">
+                        <span>Next Step</span>
+                        <p>Contact the service center to discuss the vehicle concern and arrange an appropriate inspection.</p>
+                    </div>
+                    <a href="https://wa.me/923082984718?text=Hello,%20I%20would%20like%20to%20inquire%20about%20Brake%20Service%20for%20my%20vehicle.%20Please%20share%20the%20details." target="_blank" class="btn btn-whatsapp">Inquire via WhatsApp</a>
+                </div>
+
+                <div id="finder-battery" class="finder-result">
+                    <h3>Battery Service Selected</h3>
+                    <p>Battery testing evaluates cranking power, terminal condition, and charging system performance.</p>
+                    <div class="next-step-box">
+                        <span>Next Step</span>
+                        <p>Contact the service center to discuss the vehicle concern and arrange an appropriate inspection.</p>
+                    </div>
+                    <a href="https://wa.me/923082984718?text=Hello,%20I%20would%20like%20to%20inquire%20about%20Battery%20Service%20for%20my%20vehicle.%20Please%20share%20the%20details." target="_blank" class="btn btn-whatsapp">Inquire via WhatsApp</a>
+                </div>
+
+                <div id="finder-tires" class="finder-result">
+                    <h3>Tire & Wheel Service Selected</h3>
+                    <p>Tire checks inspect tread depth, inflation pressure, wear patterns, and alignment stability.</p>
+                    <div class="next-step-box">
+                        <span>Next Step</span>
+                        <p>Contact the service center to discuss the vehicle concern and arrange an appropriate inspection.</p>
+                    </div>
+                    <a href="https://wa.me/923082984718?text=Hello,%20I%20would%20like%20to%20inquire%20about%20Tire%20%26%20Wheel%20Service%20for%20my%20vehicle.%20Please%20share%20the%20details." target="_blank" class="btn btn-whatsapp">Inquire via WhatsApp</a>
+                </div>
+
+                <div id="finder-ac" class="finder-result">
+                    <h3>Car AC Service Selected</h3>
+                    <p>Air conditioning checks inspect cooling efficiency, airflow performance, and system pressures.</p>
+                    <div class="next-step-box">
+                        <span>Next Step</span>
+                        <p>Contact the service center to discuss the vehicle concern and arrange an appropriate inspection.</p>
+                    </div>
+                    <a href="https://wa.me/923082984718?text=Hello,%20I%20would%20like%20to%20inquire%20about%20Car%20AC%20Service%20for%20my%20vehicle.%20Please%20share%20the%20details." target="_blank" class="btn btn-whatsapp">Inquire via WhatsApp</a>
+                </div>
+
+                <div id="finder-electrical" class="finder-result">
+                    <h3>Electrical Diagnostics Selected</h3>
+                    <p>Electrical troubleshooting evaluates lighting, indicators, charging output, and wiring connections.</p>
+                    <div class="next-step-box">
+                        <span>Next Step</span>
+                        <p>Contact the service center to discuss the vehicle concern and arrange an appropriate inspection.</p>
+                    </div>
+                    <a href="https://wa.me/923082984718?text=Hello,%20I%20would%20like%20to%20inquire%20about%20Electrical%20Diagnostics%20for%20my%20vehicle.%20Please%20share%20the%20details." target="_blank" class="btn btn-whatsapp">Inquire via WhatsApp</a>
+                </div>
+
+                <div id="finder-inspection" class="finder-result">
+                    <h3>General Inspection Selected</h3>
+                    <p>Comprehensive multi-point vehicle checks to assess overall condition and identify maintenance requirements.</p>
+                    <div class="next-step-box">
+                        <span>Next Step</span>
+                        <p>Contact the service center to discuss the vehicle concern and arrange an appropriate inspection.</p>
+                    </div>
+                    <a href="https://wa.me/923082984718?text=Hello,%20I%20would%20like%20to%20inquire%20about%20General%20Inspection%20for%20my%20vehicle.%20Please%20share%20the%20details." target="_blank" class="btn btn-whatsapp">Inquire via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VEHICLE HEALTH CHECK -->
+    <section class="health-check">
+        <div class="container">
+            <div class="section-header">
+                <span>Symptom Checker</span>
+                <h2>CAR HEALTH CHECK</h2>
+                <p>Select any symptoms your vehicle is currently experiencing to receive general guidance.</p>
+            </div>
+            
+            <div class="health-grid">
+                <!-- ENGINE -->
+                <div class="health-category-card">
+                    <h3>ENGINE</h3>
+                    <div class="symptom-list">
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Engine: Unusual noise"> Unusual noise</label>
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Engine: Starting concern"> Starting concern</label>
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Engine: Performance concern"> Performance concern</label>
+                    </div>
+                </div>
+
+                <!-- BRAKES -->
+                <div class="health-category-card">
+                    <h3>BRAKES</h3>
+                    <div class="symptom-list">
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Brakes: Brake noise"> Brake noise</label>
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Brakes: Brake pedal concern"> Brake pedal concern</label>
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Brakes: Stopping concern"> Stopping concern</label>
+                    </div>
+                </div>
+
+                <!-- TIRES -->
+                <div class="health-category-card">
+                    <h3>TIRES</h3>
+                    <div class="symptom-list">
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Tires: Uneven wear"> Uneven wear</label>
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Tires: Low pressure"> Low pressure</label>
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Tires: Vibration"> Vibration</label>
+                    </div>
+                </div>
+
+                <!-- BATTERY -->
+                <div class="health-category-card">
+                    <h3>BATTERY</h3>
+                    <div class="symptom-list">
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Battery: Slow starting"> Slow starting</label>
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Battery: Battery warning"> Battery warning</label>
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Battery: Electrical starting issue"> Electrical starting issue</label>
+                    </div>
+                </div>
+
+                <!-- AC -->
+                <div class="health-category-card">
+                    <h3>AC</h3>
+                    <div class="symptom-list">
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="AC: Weak cooling"> Weak cooling</label>
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="AC: Unusual sound"> Unusual sound</label>
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="AC: Airflow concern"> Airflow concern</label>
+                    </div>
+                </div>
+
+                <!-- ELECTRICAL -->
+                <div class="health-category-card">
+                    <h3>ELECTRICAL</h3>
+                    <div class="symptom-list">
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Electrical: Lights issue"> Lights issue</label>
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Electrical: Warning indicators"> Warning indicators</label>
+                        <label class="symptom-checkbox"><input type="checkbox" class="symptom-input" value="Electrical: Electrical concern"> Electrical concern</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="health-summary">
+                <h3>Recommended Next Step: Professional Workshop Inspection</h3>
+                <p>This tool provides general guidance only and does not replace professional vehicle inspection or diagnosis.</p>
+                <a href="#contact" id="healthWhatsAppBtn" class="btn btn-whatsapp" target="_blank">Inquire via WhatsApp with Selected Symptoms</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIAGNOSTIC DASHBOARD -->
+    <section id="diagnostics" class="diagnostic-dashboard">
+        <div class="container">
+            <div class="section-header">
+                <span>System Overview</span>
+                <h2>UNDERSTAND YOUR VEHICLE CONCERNS</h2>
+                <p>Click on any automotive system below to view general concerns and recommended guidance.</p>
+            </div>
+            <div class="dashboard-grid">
+                <!-- 1 -->
+                <div class="dashboard-card" onclick="toggleDashboardCard(this)">
+                    <h3>Engine</h3>
+                    <p>Click to view general concerns</p>
+                    <div class="dashboard-panel">
+                        <ul>
+                            <li>Unusual engine sounds</li>
+                            <li>Starting difficulties</li>
+                            <li>Performance irregularities</li>
+                        </ul>
+                        <div class="next-step">Next step: Professional inspection may be appropriate.</div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="dashboard-card" onclick="toggleDashboardCard(this)">
+                    <h3>Brakes</h3>
+                    <p>Click to view general concerns</p>
+                    <div class="dashboard-panel">
+                        <ul>
+                            <li>Brake squealing or grinding</li>
+                            <li>Soft or spongy pedal feel</li>
+                            <li>Increased stopping distance</li>
+                        </ul>
+                        <div class="next-step">Next step: Professional inspection may be appropriate.</div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="dashboard-card" onclick="toggleDashboardCard(this)">
+                    <h3>Battery</h3>
+                    <p>Click to view general concerns</p>
+                    <div class="dashboard-panel">
+                        <ul>
+                            <li>Slow starting crank</li>
+                            <li>Warning indicator light</li>
+                            <li>Electrical startup issue</li>
+                        </ul>
+                        <div class="next-step">Next step: Professional inspection may be appropriate.</div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="dashboard-card" onclick="toggleDashboardCard(this)">
+                    <h3>Tires</h3>
+                    <p>Click to view general concerns</p>
+                    <div class="dashboard-panel">
+                        <ul>
+                            <li>Uneven tread wear</li>
+                            <li>Low tire pressure</li>
+                            <li>Steering wheel vibration</li>
+                        </ul>
+                        <div class="next-step">Next step: Professional inspection may be appropriate.</div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="dashboard-card" onclick="toggleDashboardCard(this)">
+                    <h3>AC</h3>
+                    <p>Click to view general concerns</p>
+                    <div class="dashboard-panel">
+                        <ul>
+                            <li>Weak cooling performance</li>
+                            <li>Unusual sounds when operating</li>
+                            <li>Restricted airflow</li>
+                        </ul>
+                        <div class="next-step">Next step: Professional inspection may be appropriate.</div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="dashboard-card" onclick="toggleDashboardCard(this)">
+                    <h3>Electrical</h3>
+                    <p>Click to view general concerns</p>
+                    <div class="dashboard-panel">
+                        <ul>
+                            <li>Lighting or indicator faults</li>
+                            <li>Dashboard warning lights</li>
+                            <li>Accessory power issues</li>
+                        </ul>
+                        <div class="next-step">Next step: Professional inspection may be appropriate.</div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">Note: Clearly general guidance. Actual vehicle diagnosis requires professional inspection.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAINTENANCE GUIDE -->
+    <section id="maintenance" class="maintenance-guide">
+        <div class="container">
+            <div class="section-header">
+                <span>Car Care Basics</span>
+                <h2>BASIC CAR MAINTENANCE GUIDE</h2>
+                <p>Essential maintenance knowledge to keep your vehicle running smoothly in Karachi conditions.</p>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <h3>Regular Servicing</h3>
+                    <p>Routine checkups ensure vital components remain functional and prevent unexpected road issues.</p>
+                </div>
+                <div class="guide-card">
+                    <h3>Oil & Filter Maintenance</h3>
+                    <p>Regular oil changes protect engine internal parts and maintain efficient lubrication.</p>
+                </div>
+                <div class="guide-card">
+                    <h3>Tire Inspection</h3>
+                    <p>Monitoring tread depth and tire pressure preserves fuel economy and traction.</p>
+                </div>
+                <div class="guide-card">
+                    <h3>Brake Inspection</h3>
+                    <p>Checking brake pads and fluid ensures reliable stopping power when required.</p>
+                </div>
+                <div class="guide-card">
+                    <h3>Battery Condition</h3>
+                    <p>Testing battery terminals and charge capacity prevents unexpected starting failures.</p>
+                </div>
+                <div class="guide-card">
+                    <h3>Fluid Checks</h3>
+                    <p>Keeping coolant, brake fluid, and windshield washer fluids at proper levels.</p>
+                </div>
+                <div class="guide-card">
+                    <h3>Warning Lights</h3>
+                    <p>Never ignore dashboard warning symbols; address them promptly with an inspection.</p>
+                </div>
+                <div class="guide-card">
+                    <h3>AC Maintenance</h3>
+                    <p>Periodic AC checks maintain comfortable cabin temperatures during hot weather.</p>
+                </div>
+            </div>
+
+            <!-- PRE-SERVICE CHECKLIST -->
+            <div class="checklist-section" id="checklist">
+                <div class="checklist-box">
+                    <div class="checklist-header">
+                        <h3 style="font-size: 1.5rem; color: var(--text-primary); margin:0;">BEFORE VISITING THE SERVICE CENTER</h3>
+                        <span id="checklistCount" style="color: var(--accent); font-weight: 700;">0 / 8 Checked</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="checklistProgress"></div>
+                    </div>
+                    <div class="checklist-items">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="chk1" onchange="updateChecklist()">
+                            <label for="chk1">Describe the vehicle concern</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="chk2" onchange="updateChecklist()">
+                            <label for="chk2">Note warning lights</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="chk3" onchange="updateChecklist()">
+                            <label for="chk3">Mention unusual sounds</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="chk4" onchange="updateChecklist()">
+                            <label for="chk4">Mention starting problems</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="chk5" onchange="updateChecklist()">
+                            <label for="chk5">Mention brake concerns</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="chk6" onchange="updateChecklist()">
+                            <label for="chk6">Check tire condition</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="chk7" onchange="updateChecklist()">
+                            <label for="chk7">Mention AC problems</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="chk8" onchange="updateChecklist()">
+                            <label for="chk8">Mention electrical concerns</label>
+                        </div>
+                    </div>
+                    <div class="checklist-footer">
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; max-width: 500px; margin:0;">This checklist is for general preparation only and does not replace professional inspection.</p>
+                        <button type="button" class="btn btn-outline" onclick="resetChecklist()" style="padding: 10px 20px; font-size: 0.85rem;">Reset Checklist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE PROCESS -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header">
+                <span>How We Work</span>
+                <h2>SIMPLE SERVICE PROCESS</h2>
+                <p>Four straightforward steps to get your vehicle serviced or inspected.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <h3>INQUIRE</h3>
+                    <p>Tell us about your vehicle concern.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <h3>DISCUSS</h3>
+                    <p>Discuss the appropriate service category.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <h3>INSPECT</h3>
+                    <p>Arrange the relevant vehicle inspection/service.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <h3>SERVICE</h3>
+                    <p>Proceed with the appropriate maintenance or repair work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTOMOTIVE KNOWLEDGE & ABOUT -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span>Professional Identity</span>
+                    <h2>YOUR CAR SERVICE CENTER IN KARACHI</h2>
+                    <p>Car Service Center provides a direct point of contact for vehicle servicing, maintenance, inspection and automotive repair-related inquiries in Karachi, Pakistan.</p>
+                    <p>Whether you need routine oil maintenance, brake checks, engine diagnostics, or AC servicing, our team is ready to assist you with professional technical guidance.</p>
+                    <a href="#contact" class="btn btn-primary">Contact the Center</a>
+                </div>
+                <div class="about-image">
+                    <!-- High-quality workshop automotive image -->
+                    <img src="https://images.unsplash.com/photo-1530046339156-ef242f2771e2?auto=format&fit=crop&w=800&q=80" alt="Automotive workshop service center in Karachi">
+                </div>
+            </div>
+
+            <!-- WHY CONTACT US -->
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>Automotive Service Focus</h3>
+                    <p>Specialized focus on vehicle servicing and diagnostic maintenance support.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Direct Communication</h3>
+                    <p>Clear, straightforward discussion about your car maintenance needs.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Inquiry Support</h3>
+                    <p>Easy ways to reach out via phone, inquiry form, or WhatsApp.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Maintenance Guidance</h3>
+                    <p>Reliable general advice to keep your vehicle in running condition.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Diagnostic Assistance</h3>
+                    <p>Helpful symptom checkers and system overviews for car owners.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Convenient WhatsApp Contact</h3>
+                    <p>Instant messaging connectivity for quick inquiries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHEN SHOULD YOU CONSIDER AN INSPECTION? -->
+    <section style="padding: 80px 0; background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 40px;">
+                <span>Expert Guidance</span>
+                <h2>WHEN SHOULD YOU CONSIDER A VEHICLE INSPECTION?</h2>
+                <p>Look out for these general signs indicating your car may need professional attention.</p>
+            </div>
+            <div class="problems-grid">
+                <!-- 1 -->
+                <div class="problem-card" onclick="toggleProblem(this)">
+                    <h3>Unusual sounds <span>+</span></h3>
+                    <div class="problem-details">
+                        <p>Squealing, grinding, knocking, or rattling sounds can indicate component wear or looseness.</p>
+                        <div class="next-step">Recommended next step: professional inspection.</div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="problem-card" onclick="toggleProblem(this)">
+                    <h3>Warning lights <span>+</span></h3>
+                    <div class="problem-details">
+                        <p>Check engine, oil pressure, or battery warning symbols on the dashboard.</p>
+                        <div class="next-step">Recommended next step: professional inspection.</div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="problem-card" onclick="toggleProblem(this)">
+                    <h3>Starting problems <span>+</span></h3>
+                    <div class="problem-details">
+                        <p>Difficulty turning over the engine or clicking sounds when turning the key.</p>
+                        <div class="next-step">Recommended next step: professional inspection.</div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="problem-card" onclick="toggleProblem(this)">
+                    <h3>Brake concerns <span>+</span></h3>
+                    <div class="problem-details">
+                        <p>Soft brake pedal, vibration while braking, or reduced stopping responsiveness.</p>
+                        <div class="next-step">Recommended next step: professional inspection.</div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="problem-card" onclick="toggleProblem(this)">
+                    <h3>Tire issues <span>+</span></h3>
+                    <div class="problem-details">
+                        <p>Uneven tread wear, constant pressure loss, or steering pull.</p>
+                        <div class="next-step">Recommended next step: professional inspection.</div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="problem-card" onclick="toggleProblem(this)">
+                    <h3>AC performance changes <span>+</span></h3>
+                    <div class="problem-details">
+                        <p>Reduced cooling capacity or musty odors when operating the air conditioner.</p>
+                        <div class="next-step">Recommended next step: professional inspection.</div>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="problem-card" onclick="toggleProblem(this)">
+                    <h3>Electrical issues <span>+</span></h3>
+                    <div class="problem-details">
+                        <p>Flickering headlights, malfunctioning power windows, or erratic instrument gauges.</p>
+                        <div class="next-step">Recommended next step: professional inspection.</div>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="problem-card" onclick="toggleProblem(this)">
+                    <h3>Routine maintenance <span>+</span></h3>
+                    <div class="problem-details">
+                        <p>Mileage milestone reached for oil change, fluid flush, or filter replacement.</p>
+                        <div class="next-step">Recommended next step: professional inspection.</div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="color: var(--accent); font-weight: 600; font-size: 0.95rem;">For safety-critical concerns, seek professional inspection rather than attempting repairs yourself.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span>Got Questions?</span>
+                <h2>FREQUENTLY ASKED QUESTIONS</h2>
+                <p>Find answers to common questions about our car service center and inquiries.</p>
+            </div>
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        What services does Car Service Center provide?
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        The website covers general vehicle servicing, maintenance, diagnostics and common automotive service categories. Customers should contact the service center for current service details.
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Can I contact the center on WhatsApp?
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. Use the WhatsApp button to start an inquiry.
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Where is the service center located?
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Karachi, Pakistan.
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Can I describe my car problem before visiting?
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. Customers can use the inquiry form or WhatsApp to describe their concern.
+                    </div>
+                </div>
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Can the website diagnose my vehicle?
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        No. The website only provides general guidance. Actual vehicle diagnosis requires professional inspection.
+                    </div>
+                </div>
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Can I request a service online?
+                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                    <div class="faq-answer">
+                        Yes. The website provides a service inquiry form. Final service arrangements must be confirmed directly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION — ZERO IMAGES -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span>Get In Touch</span>
+                <h2>TALK TO THE SERVICE CENTER</h2>
+                <p>Reach out via phone, WhatsApp, or send us an inquiry form regarding your vehicle.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Info Column -->
+                <div class="contact-info">
+                    <h3>CONTACT INFORMATION</h3>
+                    <p>Connect directly with our team in Karachi for service inquiries, diagnostic discussions, and workshop visit arrangements.</p>
+                    
+                    <div class="contact-detail-list">
+                        <div class="contact-detail-item">
+                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            <span>Phone: 03082984718</span>
+                        </div>
+                        <div class="contact-detail-item">
+                            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                            <span>WhatsApp: 03082984718</span>
+                        </div>
+                        <div class="contact-detail-item">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            <span>Location: Karachi, Pakistan</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-actions">
+                        <a href="tel:+923082984718" class="btn btn-outline">Call Now</a>
+                        <a href="https://wa.me/923082984718?text=Hello,%20I%20would%20like%20to%20inquire%20about%20car%20service%20for%20my%20vehicle." target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="contact-form-box">
+                    <h3>REQUEST CAR SERVICE</h3>
+                    <form id="serviceForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" class="form-control" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="tel" id="phoneNumber" class="form-control" placeholder="03XXXXXXXXX" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="vehicleType">Vehicle Type</label>
+                                <select id="vehicleType" class="form-control" required>
+                                    <option value="" disabled selected>Select Vehicle Type</option>
+                                    <option value="Sedan">Sedan</option>
+                                    <option value="SUV">SUV</option>
+                                    <option value="Hatchback">Hatchback</option>
+                                    <option value="Coupe">Coupe</option>
+                                    <option value="Crossover">Crossover</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="serviceCategory">Service Category</label>
+                                <select id="serviceCategory" class="form-control" required>
+                                    <option value="" disabled selected>Select Service Category</option>
+                                    <option value="General Service">General Service</option>
+                                    <option value="Engine">Engine</option>
+                                    <option value="Brakes">Brakes</option>
+                                    <option value="Battery">Battery</option>
+                                    <option value="Tires">Tires</option>
+                                    <option value="AC">AC</option>
+                                    <option value="Electrical">Electrical</option>
+                                    <option value="Inspection">Inspection</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mainConcern">Main Concern</label>
+                            <input type="text" id="mainConcern" class="form-control" placeholder="Briefly describe the issue or service needed" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferredContact">Preferred Contact Method</label>
+                            <select id="preferredContact" class="form-control">
+                                <option value="Phone Call">Phone Call</option>
+                                <option value="WhatsApp" selected>WhatsApp</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" class="form-control" placeholder="Additional details about your vehicle..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Service Inquiry</button>
+                    </form>
+
+                    <div id="formConfirmation" class="form-confirmation">
+                        <h4>Inquiry Submitted Successfully</h4>
+                        <p>Thank you. Your request details have been registered. Click below to continue your inquiry instantly via WhatsApp.</p>
+                        <a id="confirmationWhatsAppBtn" href="#" target="_blank" class="btn btn-whatsapp" style="width: 100%;">Continue via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 16px; display:inline-flex;">
+                        <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.76l.12.34V17z"/><circle cx='7.5' cy='14.5' r='1.5'/><circle cx='16.5' cy='14.5' r='1.5'/></svg>
+                        CAR SERVICE CENTER
+                    </a>
+                    <p>Vehicle servicing, maintenance, diagnostics and automotive service support in Karachi, Pakistan.</p>
+                    <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">Request Car Service</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#diagnostics">Diagnostics</a></li>
+                        <li><a href="#maintenance">Maintenance</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Service Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Car Service</a></li>
+                        <li><a href="#services">Engine Diagnostics</a></li>
+                        <li><a href="#services">Brake Service</a></li>
+                        <li><a href="#services">Battery Service</a></li>
+                        <li><a href="#services">Tire Service</a></li>
+                        <li><a href="#services">AC Service</a></li>
+                        <li><a href="#services">Electrical Diagnostics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+923082984718">03082984718</a></li>
+                        <li><a href="https://wa.me/923082984718" target="_blank">WhatsApp Us</a></li>
+                        <li><a href="#contact">Karachi, Pakistan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Car Service Center. All rights reserved.</p>
+                <p>Karachi, Pakistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTopBtn" onclick="scrollToTop()" aria-label="Back to top">
+        ↑
+    </button>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Dynamic Current Year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Back to top button visibility
+            const backToTopBtn = document.getElementById('backToTopBtn');
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Scroll to Top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Service Finder Tabs
+        const finderPills = document.querySelectorAll('.finder-pill');
+        const finderResults = document.querySelectorAll('.finder-result');
+
+        finderPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                finderPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+
+                const target = pill.getAttribute('data-target');
+                finderResults.forEach(res => {
+                    res.classList.remove('active');
+                });
+                document.getElementById(`finder-${target}`).classList.add('active');
+            });
+        });
+
+        // Pre-select service from service card
+        function selectService(categoryName) {
+            const serviceSelect = document.getElementById('serviceCategory');
+            for (let i = 0; i < serviceSelect.options.length; i++) {
+                if (serviceSelect.options[i].value.toLowerCase() === categoryName.toLowerCase()) {
+                    serviceSelect.selectedIndex = i;
+                    break;
+                }
+            }
+            document.getElementById('mainConcern').value = `Inquiry regarding ${categoryName}`;
+        }
+
+        // Health Check WhatsApp Link Generator
+        const symptomInputs = document.querySelectorAll('.symptom-input');
+        const healthWhatsAppBtn = document.getElementById('healthWhatsAppBtn');
+
+        function updateHealthWhatsApp() {
+            const selectedSymptoms = [];
+            symptomInputs.forEach(input => {
+                if (input.checked) {
+                    selectedSymptoms.push(input.value);
+                }
+            });
+
+            let msg = "Hello, I would like to inquire about car service for my vehicle.";
+            if (selectedSymptoms.length > 0) {
+                msg = `Hello, I would like to inquire about my vehicle experiencing the following symptoms: ${selectedSymptoms.join(', ')}. Please share the details.`;
+            }
+
+            healthWhatsAppBtn.href = `https://wa.me/923082984718?text=${encodeURIComponent(msg)}`;
+        }
+
+        symptomInputs.forEach(input => {
+            input.addEventListener('change', updateHealthWhatsApp);
+        });
+        updateHealthWhatsApp();
+
+        // Diagnostic Dashboard Toggle Panel
+        function toggleDashboardCard(card) {
+            const isOpen = card.classList.contains('open');
+            // Close all
+            document.querySelectorAll('.dashboard-card').forEach(c => c.classList.remove('open'));
+            if (!isOpen) {
+                card.classList.add('open');
+            }
+        }
+
+        // Common Car Problems Toggle
+        function toggleProblem(card) {
+            const isOpen = card.classList.contains('active');
+            document.querySelectorAll('.problem-card').forEach(c => c.classList.remove('active'));
+            if (!isOpen) {
+                card.classList.add('active');
+            }
+        }
+
+        // Checklist logic
+        function updateChecklist() {
+            const checkboxes = document.querySelectorAll('.checklist-items input[type="checkbox"]');
+            let checkedCount = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) checkedCount++;
+            });
+
+            const percentage = (checkedCount / checkboxes.length) * 100;
+            document.getElementById('checklistProgress').style.width = `${percentage}%`;
+            document.getElementById('checklistCount').textContent = `${checkedCount} / ${checkboxes.length} Checked`;
+        }
+
+        function resetChecklist() {
+            const checkboxes = document.querySelectorAll('.checklist-items input[type="checkbox"]');
+            checkboxes.forEach(cb => cb.checked = false);
+            updateChecklist();
+        }
+
+        // FAQ Accordion
+        function toggleFAQ(questionElement) {
+            const item = questionElement.parentElement;
+            const isOpen = item.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                faq.classList.remove('active');
+            });
+
+            if (!isOpen) {
+                item.classList.add('active');
+            }
+        }
+
+        // Frontend Form Submission & Dynamic WhatsApp
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const fullName = document.getElementById('fullName').value.trim();
+            const phoneNumber = document.getElementById('phoneNumber').value.trim();
+            const vehicleType = document.getElementById('vehicleType').value;
+            const serviceCategory = document.getElementById('serviceCategory').value;
+            const mainConcern = document.getElementById('mainConcern').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!fullName || !phoneNumber || !vehicleType || !serviceCategory || !mainConcern) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            const waMsg = `Hello, my name is ${fullName}. I have a ${vehicleType} and would like to inquire about ${serviceCategory}. Main concern: ${mainConcern}. ${message ? 'Additional message: ' + message : ''}`;
+
+            const confirmationBtn = document.getElementById('confirmationWhatsAppBtn');
+            confirmationBtn.href = `https://wa.me/923082984718?text=${encodeURIComponent(waMsg)}`;
+
+            document.getElementById('serviceForm').style.display = 'none';
+            document.getElementById('formConfirmation').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
